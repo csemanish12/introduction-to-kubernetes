@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-all-keys-from-config-map
+spec:
+  containers:
+    - name: container-with-all-keys-from-config-map
+      image: nginx:latest
+      envFrom:
+        - configMapRef:
+            name: my-config-map-wth-multiple-keys

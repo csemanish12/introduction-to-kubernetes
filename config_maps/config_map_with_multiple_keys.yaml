@@ -6,4 +6,6 @@ data:
   key1: value1
   key2: value2
   LOG_LEVEL : INFO
-  RANDOM: "some random value"
+  SOME_RANDOM: "some random value"
+  RANDOM_KEY: ok
+  RANDOM_VALUE: "not ok"
