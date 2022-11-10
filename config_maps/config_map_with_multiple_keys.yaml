@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config-map-wth-multiple-keys
+data:
+  key1: value1
+  key2: value2
+  LOG_LEVEL : INFO
+  RANDOM: "some random value"
