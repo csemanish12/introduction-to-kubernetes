@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-config-map-keys-in-command
+spec:
+  containers:
+    - image: nginx:latest
+      name: container-with-config-map-keys-in-command
+      command: [ "/bin/sh", "-c", "echo $(MY_RANDOM_KEY) $(MY_RANDOM_VALUE)" ]
+      env:
+        - name: MY_RANDOM_KEY
+          valueFrom:
+            configMapKeyRef:
+              name: my-config-map-wth-multiple-keys
+              key: RANDOM_KEY
+        - name: MY_RANDOM_VALUE
+          valueFrom:
+            configMapKeyRef:
+              name: my-config-map-wth-multiple-keys
+              key: RANDOM_VALUE
