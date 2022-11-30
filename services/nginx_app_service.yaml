@@ -10,4 +10,4 @@ spec:
     - targetPort: 80
       port: 8081
       protocol: TCP
-  type: NodePortgit
+  type: NodePort
