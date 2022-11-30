@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-with-resource-definition
+spec:
+  containers:
+    - name: container-with-resource-definition
+      image: python:3.8-buster
+      command: ["/bin/sleep", "3650d"]
+      resources:
+        requests:
+          cpu: 100m
+          memory: 128Mi
+        limits:
+          cpu: 150m
+          memory: 256Mi
+
